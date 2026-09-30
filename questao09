@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int vetor[6];
+    int i = 0;
+    
+    printf("Digite 6 numeros inteiros PARES:\n");
+    while (i < 6) {
+        int temp;
+        printf("Par %d: ", i + 1);
+        scanf("%d", &temp);
+        
+        if (temp % 2 == 0) {
+            vetor[i] = temp;
+            i++;
+        } else {
+            printf("Numero invalido! Digite apenas valores pares.\n");
+        }
+    }
+    
+    printf("\nValores pares na ordem inversa:\n");
+    for (int j = 5; j >= 0; j--) {
+        printf("%d ", vetor[j]);
+    }
+    printf("\n");
+    
+    return 0;
+}
